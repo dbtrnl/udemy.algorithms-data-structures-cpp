@@ -7,14 +7,19 @@ using namespace std;
 int fibonacci(int n) {
   if (n == 0) return 0;
   if (n == 1) return 1;
-
-  /* Is this any different from line 15? The video is not clear.
+  /* This isn't faster.
+  Runs at fib(45): 9.061590 sec and 8.789460 sec
   int fib1 = fibonacci(n-1);
   int fib2 = fibonacci(n-2);
   return fib1 + fib2;
   */
+  return fibonacci(n-1)+fibonacci(n-2); // Runs at fib(45): 8.611968 sec and 8.899689 sec... Slightly faster?
+}
 
-  return fibonacci(n-1)+fibonacci(n-2);
+long int fibonacciTail(long int n, long int a, long int b) {
+    if(n==0) return a;
+    if(n==1) return b;
+    return fibonacciTail(n-1,b,a+b);
 }
 
 int main() {
@@ -25,7 +30,7 @@ int main() {
   auto start = chrono::high_resolution_clock::now();
   ios_base::sync_with_stdio(false);
 
-  cout << fibonacci(43) << endl;
+  cout << fibonacciTail(5000, 0, 1) << endl;
 
   auto end = chrono::high_resolution_clock::now();
     double time_taken = 
