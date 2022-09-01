@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+#include <chrono>
 #include <iostream>
 
 using namespace std;
@@ -16,6 +18,24 @@ int fibonacci(int n) {
 }
 
 int main() {
-  cout << fibonacci(10) << endl;
+  /* 
+    Source - https://www.geeksforgeeks.org/measure-execution-time-with-high-precision-in-c-c/
+    At 5. Using chrono::high_resolution_clock in C++.
+   */
+  auto start = chrono::high_resolution_clock::now();
+  ios_base::sync_with_stdio(false);
+
+  cout << fibonacci(43) << endl;
+
+  auto end = chrono::high_resolution_clock::now();
+    double time_taken = 
+      chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+  
+    time_taken *= 1e-9;
+  
+    cout << "Time taken by program is : " << fixed 
+         << time_taken << setprecision(9);
+    cout << " sec" << endl;
+
   return 0;
 }
