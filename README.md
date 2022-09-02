@@ -39,3 +39,9 @@ Values much lower are already overflowing (such as `fib(5000)`)
 `fib(5000) with double = inf` (wtf)
 
 But in reality is a 1045 digit number (source: https://zeptomath.com/tools/fibonaccinumbers.php?number=5000&hl=en)
+
+---
+
+## Makefiles
+
+to run, just type `make` and to clean, `make clean`
