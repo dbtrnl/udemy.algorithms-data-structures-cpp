@@ -5,6 +5,8 @@ Incremental build (executed by the instructors Eclipse)
 
 Then `g++ -o Factorial "src/Factorial.o"` or `g++ src/Factorial.o -o build/Factorial`
 
+To compile and run *NQueensProblem*: `g++ src/main.cpp src/NQueensProblem.h src/NQueensProblem.cpp -o build/main && ./build/main`
+
 ### Video 6
 What is the problem with head recursion?
 - It may use too many frames in the stack (stack overflow)
