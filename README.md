@@ -14,6 +14,25 @@ What is the problem with head recursion?
 - It uses twice as much memory as an *iterative* approach
 - Tail recursion can avoid stackoverflow, because there is always only one function call on the stack
 
+### Video 24 - Coloring problem introduction
+It's again an **NP-complete** problem.
+
+*Approaches to solve this problem:*
+1 - Greedy: finds a solution, but not necessarily the best one (with least colors) **not covered**;
+2 - Backtracking: discard and reject multiple bad states with a single iteration;
+3 - Powell-Welsh algorithm - relies on sorting the nodes based on the degree (number of edges) **not covered**.
+
+
+### Video 27 - Knight's tour problem introduction
+Knight's tour problem has `O(2^3^(n*n))` (exponential) running time complexity.
+But it can be solved in `O(n)` (linear) using divide-and-conquer approach (not covered in this course).
+
+For `M x N` chessboard, closed knight tour is always feasible unless:
+- *M* and *N* are both odds;
+- *M* = 1, 2 or 4;
+- *M* = 3 AND *N* = 4, 6 or 8.
+
+
 ### Fibonacci benchmark
 
 With head recursion:
