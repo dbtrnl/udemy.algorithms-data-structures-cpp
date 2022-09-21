@@ -32,6 +32,16 @@ For `M x N` chessboard, closed knight tour is always feasible unless:
 - *M* = 1, 2 or 4;
 - *M* = 3 AND *N* = 4, 6 or 8.
 
+### Video 33 - Knapsack problem introduction
+**Divisible knapsack problem**
+  - Greedy approach can be used > sort items according to values O(n log n) then take as much as possible of the most valuable item;
+  - Overall time complexity is O(n log^n) + O(n) = O(n log n).
+**0-1 knapsack problem** (item is or isn't included)
+  - Brute force approach is O(2^n);
+  - Greedy algorithm will not provide the optimal result;
+  - Dynamic programming can optimize this problem (More info on the slides);
+    - Running time is O(nM) > pseudo-polynomial time.
+
 
 ### Fibonacci benchmark
 
