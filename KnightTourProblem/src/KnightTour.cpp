@@ -6,7 +6,7 @@ using std::cout;
 
 // The valid moves for the Knight
 const std::array<int, 8> KnightTour::xMoves = {2,1,-1,-2,-2,-1,1,2};
-const std::array<int, 8> KnightTour::yMoves = {1,2,2,1,-1,-2,-2,1};
+const std::array<int, 8> KnightTour::yMoves = {1,2,2,1,-1,-2,-2,-1};
 
 KnightTour::KnightTour() {
   solutionMatrix.resize(BOARD_SIZE);
