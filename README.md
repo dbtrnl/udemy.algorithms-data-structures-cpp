@@ -1,4 +1,4 @@
-### General C++ stuff
+## General C++ stuff
 `g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src/Factorial.o" "src/Factorial.cpp"`
 
 Incremental build (executed by the instructors Eclipse)
@@ -6,6 +6,10 @@ Incremental build (executed by the instructors Eclipse)
 Then `g++ -o Factorial "src/Factorial.o"` or `g++ src/Factorial.o -o build/Factorial`
 
 To compile and run *NQueensProblem*: `g++ src/main.cpp src/NQueensProblem.h src/NQueensProblem.cpp -o build/main && ./build/main`
+
+---
+
+## Notes about the videos:
 
 ### Video 6
 What is the problem with head recursion?
@@ -42,6 +46,31 @@ For `M x N` chessboard, closed knight tour is always feasible unless:
   - Dynamic programming can optimize this problem (More info on the slides);
     - Running time is O(nM) > pseudo-polynomial time.
 
+### Video 38 - What are array data structures?
+  - Array is contiguous in memory. So any item can be accessed in O(1) by it's index. *Random access*
+  - Array beginning in 0x100 > index 1 = 0x116 > index 2 = 0x132, and so on... (with 4 bytes = 32 bits = 16 in hex)
+  - **Memory address = array's address + (index * data size)**
+  - A Matrix also has O(1) access time.
+
+### Video 39 - Array introduction - operations
+*1. Adding items*
+  - Memory and running time trade-off also apply;
+  - Using a huge array wastes memory, but saves time, as it doesn't need to be resized;
+  - Resizing an array due to lack of space consumes O(n) time.
+
+*2. Adding numbers to arbitrary positions*
+  - Has worst-case execution time of O(n), as items need to be shifted.
+
+*3. Removing last item*
+  - O(1) running time.
+
+*4. Removing item from arbitrary position;*
+  - Need to remove item and then deal with the "hole" in the data structure;
+  - Execution time of O(n) to find item, then O(1) to remove then O(n) to shift all items.
+
+Disadvantage: Size of array must be known at compile time.
+
+---
 
 ### Fibonacci benchmark
 
