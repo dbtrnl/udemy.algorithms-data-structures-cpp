@@ -70,6 +70,24 @@ For `M x N` chessboard, closed knight tour is always feasible unless:
 
 Disadvantage: Size of array must be known at compile time.
 
+### Video 41/42 - What are linked lists?/Linked list theory - operations
+  - There are no holes in a linked list, because every node stores data + reference to next node;
+  - No random indexing, as numbers aren't stored next to each other in memory;
+  - Base structure for stacks and queues;
+  - Insertion/removal to beginning (head node) is O(1);
+  - Insertion/removal to arbitrary/end node is O(n);
+  *Advantages*
+    - They are **dynamic data structures** - they can acquire memory at runtime by inserting new nodes;
+    - No need to resize the data structure (like in arrays);
+    - The size of the structure can be unknown at runtime;
+    - Can store different sized items (unlike arrays);
+  *Disadvantages*
+    - Needs more memory (references to head/next nodes);
+    - No random access (only head node is easily accessible);
+    - Can't go backwards (previous node is unknown);
+    - **not predictable** > application runtime depends on the operations done by the users;
+    - The problem remains: "how to search for arbitrary items faster than O(n)?".
+
 ---
 
 ### Fibonacci benchmark
