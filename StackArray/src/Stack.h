@@ -17,7 +17,7 @@ public:
   ~Stack() {
     delete[] stack;
   }
-
+  // Worst case is O(n)
   void push(const t_Data &item) {
     // To resize the array (time complexity O(n))
     if (numberOfItems == capacity) resize(2 * capacity);
