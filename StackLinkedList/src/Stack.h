@@ -17,11 +17,13 @@ class Stack {
 public:
   // Pushing is O(1);
   void push(const t_Data &newData) {
-    if (!head) head = make_unique<Node>(newData);
-    else
+    if (!head) {
+      head = make_unique<Node>(newData);
+    } else {
       unique_ptr<Node> oldhead = std::move(head);
       head = make_unique<Node>(newData);
       head -> nextNode = std::move(oldhead);
+    }
     ++count;
   }
 
