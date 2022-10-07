@@ -88,8 +88,7 @@ Disadvantage: Size of array must be known at compile time.
     - **not predictable** > application runtime depends on the operations done by the users;
     - The problem remains: "how to search for arbitrary items faster than O(n)?".
 
-
-### Stacks - Videos 56 - 51
+### Stacks - Videos 46 - 51
 - It's an *abstract data type* that can be implemented with arrays or linked lists;
 - Basic operations are `pop()`, `push()` and `peek()`
 - Most modern languages are stack-oriented;
@@ -101,6 +100,12 @@ Applications:
 **Stack memory x Heap memory**
 Stack > small, fast, stores function calls and local variables, not fragmented;
 Heap > larger, slower, stores objects and can become fragmented.
+
+### Queues - Videos 52, 53
+- Useful when a resource is shared with several consumers (i.e. threads);
+- Important in CPU scheduling;
+- Important when data is transfered asynchronously between two processes;
+- *breadth-first search* algorithm uses queues.
 
 ---
 
