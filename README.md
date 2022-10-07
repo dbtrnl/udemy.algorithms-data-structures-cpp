@@ -107,6 +107,45 @@ Heap > larger, slower, stores objects and can become fragmented.
 - Important when data is transfered asynchronously between two processes;
 - *breadth-first search* algorithm uses queues.
 
+### Arrays x Linked Lists
+Search                  = A > O(1)  / LL > O(n)
+Insert at the start     = A > O(n)  / LL > O(1)
+Insert at the end       = A > O(1)  / LL > O(n)
+Wasted space            = A > 0     / LL > O(n)
+Search Arbitrary item   = both O(n)
+
+- Searching for arbitrary item on arrays/linked lists takes O(N)
+**What if the array is sorted?**
+- Search for arbitrary item can take O(logN) time complexity;
+**Trees**
+  - Is a G(Vertices,Edges) undirected graph in which any two vertices are connected by exactly one path or
+    equivalently *a conected acyclic undirected graph*
+  - Tree nodes can have more than 2 children
+
+### Binary search trees
+Running times:
+Space complexity > O(N) avg / O(N) worst
+Insertion > O(logN) avg / O(N) worst
+Deletion > O(logN) avg / O(N) worst
+Search > O(logN) avg / O(N) worst
+
+- Each node can have at most 2 children;
+- The left child is smaller than the parent node;
+- THe right child is greater than the parent node;
+  *Height of a tree* - number of edges on the longest downward path between the ROOT and a LEAF NODE.
+    The number of layers the tree contains.
+    Layer H will have 2^h-1 nodes
+    *How many N nodes are there in a complete binary search tree with H height?*
+    2^h-1 = N;
+    log2^(2^h-1) = log2^N; <!-- Apply log2 to both sides -->
+    h = log2^N+1;
+    h = O(logN); This is important because only when the tree is balanced the running time is O(logN);
+  - Unbalanced tree can even have a running time of O(N) (best case);
+  - Balanced tree will always have a running time of O(logN);
+*Tree traversal* > pre-order, post-order and in-order
+  - Pre-order > visit the root node then the left subtree recursively, then the right subtree recursively;
+  - Post-order > visit the left subtree recursively, then the right subtree recursively, then the root node;
+  - In-order > visit the left subtree of the binary tree then the root node then the right subtree in a recursive manner;
 ---
 
 ### Fibonacci benchmark
